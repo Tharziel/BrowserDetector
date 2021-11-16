@@ -5,94 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detection_de_navigateur</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: whitesmoke;
-        }
-
-        body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: linear-gradient(14deg, black 50%, darkred 50%);
-        }
-
-        .container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .container h1{
-            color: greenyellow;
-            font-size: 50px;
-        }
-
-        ul li{
-            list-style: none;
-            margin-left: 15px;
-        }
-
-        .isSelected{
-            color: aqua;
-            text-shadow: 3px 3px 10px chartreuse;
-            font-size: 40px;
-        }
-
-    </style>
-
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
     
-<main class="container">
-    <h1>Navigateur : </h1>
-    <ul>
-        <li class="chrome">Chrome</li>
-        <li class="firefox">Firefox</li>
-        <li class="opera">Opera</li>
-        <li class="safari">Safari</li>
-        <li class="edge">Edge</li>
-    </ul>
-</main>
+    <main class="container">
+        <h1>Navigateur : </h1>
+        <ul>
+            <li class="chrome">Chrome</li>
+            <li class="firefox">Firefox</li>
+            <li class="opera">Opera</li>
+            <li class="safari">Safari</li>
+            <li class="edge">Edge</li>
+        </ul>
+    </main>
 
-<script>
-
-let userAgent = navigator.userAgent; // Navigator est un object qui contient des infos à propos du navigateur
-//console.log(userAgent);
-let browser;
-if (userAgent.match(/edg/i)) {
-    browser ='edge';
-} else if(userAgent.match(/firefox|fxios/i)){
-    browser ='firefox';
-} else if(userAgent.match(/opr/i)){
-    browser ='opera';
-} else if(userAgent.match(/chrome|chromium|vrios/i)){
-    browser ='chrome';
-} else if(userAgent.match(/safari/i)){
-    browser ='safari';
-}else{
-    alert('Navigateur non pris en charge !')
-}
-console.log(browser);
-
-const BROWSER = document.querySelector(`.${browser}`);
-BROWSER.classList.add('isSelected');
-
-
-</script>
+    <script src="app.js"></script>
 
 </body>
 </html>
